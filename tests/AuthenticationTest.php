@@ -57,7 +57,8 @@ class AuthenticationTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function testCreateAuthHeaderTrailingSpaces() {
+    public function testCreateAuthHeaderTrailingSpaces()
+    {
         $mockTimestamp = $this->prophesize('\Akamai\Open\EdgeGrid\Authentication\Timestamp');
         $mockTimestamp->__toString()->willReturn("20170831T19:34:21+0000");
         $mockTimestamp->isValid()->willReturn(true);
